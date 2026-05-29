@@ -92,6 +92,49 @@
             border-color: #d4d4d8 !important;
         }
 
+        /* Skills light mode */
+        html.light #dev .skills-grid-border {
+            border-color: #d4d4d8 !important;
+            background: #d4d4d8 !important;
+        }
+        html.light #dev .skills-card {
+            background: rgba(255,255,255,0.7) !important;
+        }
+        html.light #dev .skills-card:hover {
+            background: rgba(255,255,255,0.95) !important;
+        }
+        html.light #dev .skills-stack-border {
+            border-color: #d4d4d8 !important;
+        }
+        html.light #dev .skills-divider {
+            border-color: #e4e4e7 !important;
+        }
+        html.light #dev .skills-sep {
+            background: #d4d4d8 !important;
+        }
+        html.light #dev .skills-tag {
+            border-color: #a1a1aa !important;
+            color: #27272a !important;
+        }
+        html.light #dev .skills-row:hover {
+            background: rgba(0,0,0,0.03) !important;
+        }
+        html.light #dev .skills-label {
+            color: #a1a1aa !important;
+        }
+        html.light #dev .skills-icon {
+            color: #52525b !important;
+        }
+        html.light #dev .skills-text {
+            color: #52525b !important;
+        }
+        html.light #dev .skills-num {
+            color: #a1a1aa !important;
+        }
+        html.light #dev .skills-desc-highlight {
+            color: #18181b !important;
+        }
+
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -436,66 +479,80 @@
 
         </div>
 
-        <div id="dev" class="tab-content min-h-screen justify-center px-4 sm:px-6 py-24 w-full">
-            <div class="max-w-6xl w-full text-left mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
-                    <div>
-                        <h3 class="font-bold text-lg md:text-xl mb-3 md:mb-4">Engineer</h3>
-                        <p class="muted text-zinc-400 text-sm md:text-base leading-relaxed font-light">Developing robust
-                            backend systems with <strong class="font-medium">Java and Spring Boot</strong>. Core
-                            developer of an <strong class="font-medium">Inventory Management System</strong> used in
-                            production to solve real business challenges, focusing on <strong class="font-medium">Clean
-                                Code</strong> and <strong class="font-medium">SOLID</strong> principles.</p>
+        <!-- SKILLS - novo design -->
+        <div id="dev" class="tab-content min-h-screen justify-center px-4 sm:px-6 py-28 w-full">
+            <div class="max-w-5xl w-full mx-auto">
+
+                <!-- Três cards de perfil -->
+                <div class="skills-grid-border grid grid-cols-1 md:grid-cols-3 gap-px bg-zinc-800/40 rounded-2xl overflow-hidden border border-zinc-800/60 mb-6">
+                    <div class="skills-card bg-zinc-950/60 p-8 flex flex-col gap-3 hover:bg-zinc-900/80 transition-colors duration-300">
+                        <span class="skills-num text-[10px] tracking-[0.25em] uppercase text-zinc-600 font-medium"></span>
+                        <h3 class="text-base font-medium">Engineer</h3>
+                        <p class="skills-text text-zinc-500 text-sm leading-relaxed font-light">
+                            Backend systems with <span class="skills-desc-highlight text-zinc-300 font-medium">Java & Spring Boot</span>. Core dev of an Inventory Management System in production, following <span class="skills-desc-highlight text-zinc-300 font-medium">Clean Code</span> and <span class="skills-desc-highlight text-zinc-300 font-medium">SOLID</span> principles.
+                        </p>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-lg md:text-xl mb-3 md:mb-4">Analytical</h3>
-                        <p class="muted text-zinc-400 text-sm md:text-base leading-relaxed font-light">Specialist in
-                            process optimization. At Descomplica, I analyzed complex digital workflows to <strong
-                                class="font-medium">reduce service time from 3 days to 20 minutes</strong>, managing
-                            security and authentication for over 50 daily users.</p>
+                    <div class="skills-card bg-zinc-950/60 p-8 flex flex-col gap-3 hover:bg-zinc-900/80 transition-colors duration-300 border-l border-r border-zinc-800/60">
+                        <span class="skills-num text-[10px] tracking-[0.25em] uppercase text-zinc-600 font-medium"></span>
+                        <h3 class="text-base font-medium">Analytical</h3>
+                        <p class="skills-text text-zinc-500 text-sm leading-relaxed font-light">
+                            Process optimization specialist. At Descomplica, reduced service time from <span class="skills-desc-highlight text-zinc-300 font-medium">3 days → 20 minutes</span>, managing auth for 50+ daily users.
+                        </p>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-lg md:text-xl mb-3 md:mb-4">Tech & Business</h3>
-                        <p class="muted text-zinc-400 text-sm md:text-base leading-relaxed font-light">ADS student with
-                            a focus on delivering high-quality documentation and modular code. I bridge the gap between
-                            technical infrastructure and business needs, ensuring teams ship reliable solutions with
-                            clarity.</p>
+                    <div class="skills-card bg-zinc-950/60 p-8 flex flex-col gap-3 hover:bg-zinc-900/80 transition-colors duration-300">
+                        <span class="skills-num text-[10px] tracking-[0.25em] uppercase text-zinc-600 font-medium"></span>
+                        <h3 class="text-base font-medium">Tech & Business</h3>
+                        <p class="skills-text text-zinc-500 text-sm leading-relaxed font-light">
+                            ADS student bridging technical infrastructure and business needs. High-quality docs, modular code, reliable delivery.
+                        </p>
                     </div>
                 </div>
 
-                <div class="dev-card bg-zinc-900/40 border border-zinc-800 rounded-xl p-6 md:p-8 space-y-6">
-                    <div
-                        class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0 border-b border-zinc-800/50 pb-4">
-                        <span
-                            class="text-[10px] md:text-xs font-bold tracking-[0.2em] text-zinc-500 uppercase sm:w-32 flex-shrink-0">Frontend</span>
-                        <div class="flex gap-4 sm:gap-6 text-zinc-300"><i data-lucide="code-2"
-                                class="w-4 h-4 md:w-5 md:h-5"></i><i data-lucide="file-json"
-                                class="w-4 h-4 md:w-5 md:h-5"></i></div>
-                    </div>
-                    <div
-                        class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0 border-b border-zinc-800/50 pb-4">
-                        <span
-                            class="text-[10px] md:text-xs font-bold tracking-[0.2em] text-zinc-500 uppercase sm:w-32 flex-shrink-0">Backend</span>
-                        <div class="flex gap-4 sm:gap-6 text-zinc-300 font-bold text-[10px] md:text-xs">
-                            <span>JAVA</span><span>SPRING</span></div>
-                    </div>
-                    <div
-                        class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0 border-b border-zinc-800/50 pb-4">
-                        <span
-                            class="text-[10px] md:text-xs font-bold tracking-[0.2em] text-zinc-500 uppercase sm:w-32 flex-shrink-0">Data</span>
-                        <div class="flex gap-4 sm:gap-6 text-zinc-300 items-center"><i data-lucide="database"
-                                class="w-4 h-4 md:w-5 md:h-5"></i><span class="text-[10px] md:text-xs">PostgreSQL /
-                                MySQL</span></div>
-                    </div>
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0">
-                        <span
-                            class="text-[10px] md:text-xs font-bold tracking-[0.2em] text-zinc-500 uppercase sm:w-32 flex-shrink-0">Devops</span>
-                        <div class="flex gap-4 sm:gap-6 text-zinc-300 items-center"><i data-lucide="github"
-                                class="w-4 h-4 md:w-5 md:h-5"></i><i data-lucide="git-branch"
-                                class="w-4 h-4 md:w-5 md:h-5"></i><span class="text-[10px] md:text-xs">Docker ·
-                                Render</span></div>
+                <!-- Stack -->
+                <div class="skills-stack-border border border-zinc-800/60 rounded-2xl overflow-hidden">
+                    <div class="grid grid-cols-1 divide-y skills-divider divide-zinc-800/40">
+
+                        <div class="skills-row flex items-center gap-6 px-8 py-5 hover:bg-zinc-900/40 transition-colors group">
+                            <span class="skills-label text-[10px] tracking-[0.2em] uppercase text-zinc-600 font-medium w-24 shrink-0">Frontend</span>
+                            <div class="skills-sep h-4 w-px bg-zinc-800"></div>
+                            <div class="flex items-center gap-3 skills-icon text-zinc-400 group-hover:text-zinc-300 transition-colors">
+                                <i data-lucide="code-2" class="w-4 h-4"></i>
+                                <i data-lucide="file-json" class="w-4 h-4"></i>
+                                <span class="skills-text text-xs text-zinc-600">HTML · CSS · JS</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-row flex items-center gap-6 px-8 py-5 hover:bg-zinc-900/40 transition-colors group">
+                            <span class="skills-label text-[10px] tracking-[0.2em] uppercase text-zinc-600 font-medium w-24 shrink-0">Backend</span>
+                            <div class="skills-sep h-4 w-px bg-zinc-800"></div>
+                            <div class="flex items-center gap-4">
+                                <span class="skills-tag text-xs font-semibold tracking-widest text-zinc-300 border border-zinc-700 rounded px-2 py-0.5">JAVA</span>
+                                <span class="skills-tag text-xs font-semibold tracking-widest text-zinc-300 border border-zinc-700 rounded px-2 py-0.5">SPRING</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-row flex items-center gap-6 px-8 py-5 hover:bg-zinc-900/40 transition-colors group">
+                            <span class="skills-label text-[10px] tracking-[0.2em] uppercase text-zinc-600 font-medium w-24 shrink-0">Data</span>
+                            <div class="skills-sep h-4 w-px bg-zinc-800"></div>
+                            <div class="flex items-center gap-3 skills-icon text-zinc-400 group-hover:text-zinc-300 transition-colors">
+                                <i data-lucide="database" class="w-4 h-4"></i>
+                                <span class="skills-text text-xs text-zinc-400">PostgreSQL / MySQL</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-row flex items-center gap-6 px-8 py-5 hover:bg-zinc-900/40 transition-colors group">
+                            <span class="skills-label text-[10px] tracking-[0.2em] uppercase text-zinc-600 font-medium w-24 shrink-0">DevOps</span>
+                            <div class="skills-sep h-4 w-px bg-zinc-800"></div>
+                            <div class="flex items-center gap-3 skills-icon text-zinc-400 group-hover:text-zinc-300 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <i data-lucide="git-branch" class="w-4 h-4"></i>
+                                <span class="skills-text text-xs text-zinc-400">Docker · Render</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
         </div>
 
